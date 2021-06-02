@@ -17,14 +17,14 @@ public class CardTrick {
     
     public static void main(String[] args)
     {
-        Card luckyCard = new Card
+        Card luckyCard = new Card(6, "Diamonds");
         
         Card[] magicHand = new Card[7];
         
         
         for (int i=0; i<magicHand.length; i++)
         {
-            Card c = new Card(6, "Diamonds");
+            Card c = new Card();
             
             
             
