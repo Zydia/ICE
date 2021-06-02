@@ -19,6 +19,7 @@ public class CardTrick {
     
     public static void main(String[] args)
     {
+        //creating luckyCrad object with a number and suit 
         Card luckyCard = new Card();
         int s = 6;
         String d = "Diamonds";
@@ -32,24 +33,27 @@ public class CardTrick {
             
             
             
-            //c.setValue(insert call to random number generator here)
+            //generating random value
            Random rand = new Random();
             int random = rand.nextInt(13 - 1) + 0;
             c.setValue(random);
-            
+           
+            //genertaing random suit 
             int random2 = rand.nextInt(3);
             c.setSuit(Card.SUITS[random2]);
             
             magicHand [i] = c;
         }
-        //printing The magicHand array with 
+        
+        //printing The magicHand array 
         for(int i =0; i<magicHand.length;i++){
             System.out.println(magicHand[i].getSuit() + "  "+magicHand[i].getValue());
             }
+        
         //insert code to ask the user for Card value and suit, create their card
         Scanner input = new Scanner(System.in);
         
-        System.out.println("Enter Card infos");
+        System.out.println("Enter your Card information");
         
         int num = input.nextInt();
     
@@ -57,13 +61,13 @@ public class CardTrick {
         String usersuit = " ";
         switch(num){
             case 1: 
-                usersuit = "Heart";
+                usersuit = "Spades";
                 break;
                 case 2: 
-                 usersuit = "Diamonds";
+                 usersuit =  "Clubs";
                    break;
                 case 3: 
-                 usersuit = "Heart";
+                 usersuit = "Diamonds";
                    break;
                 case 4: 
                  usersuit = "Heart";   } 
@@ -77,7 +81,7 @@ public class CardTrick {
         for (int i =0 ; i<magicHand.length;i++){
             
                 if(usersuit.equals(magicHand[i].getSuit()) && userValue == magicHand[i].getValue() ){
-                System.out.println("The majic hand dose contain your card!"); 
+                System.out.println("The majic hand contains your card!"); 
                 break;
             }else{
                 System.out.println("The majic hand dose NOT contain your card!"); 
