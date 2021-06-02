@@ -17,7 +17,9 @@ public class CardTrick {
     
     public static void main(String[] args)
     {
-        Card luckyCard = new Card(6, "Diamonds");
+        Card luckyCard = new Card();
+        int s = 6;
+        String d = "Diamonds";
         
         Card[] magicHand = new Card[7];
         
